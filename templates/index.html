@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flood Prone Streets - Ernakulam</title>
+</head>
+<body>
+    <h2>Flood Prone Streets Real-Time Visualizer (Simulation)</h2>
+    <iframe src="/map.html" width="100%" height="600"></iframe>
+    <br><br>
+    <h3>Bolt AI Integration Simulation</h3>
+    <p>If Bolt water sensor reading > 5cm → Show flood alert (simulated below):</p>
+    <div id="bolt-alert"></div>
+
+    <script>
+        // Simulating Bolt AI integration alert
+        let bolt_water_level = Math.floor(Math.random() * 10); // Random value 0-10 cm
+        if (bolt_water_level > 5) {
+            document.getElementById('bolt-alert').innerHTML = "⚠️ ALERT: Water level high (" + bolt_water_level + " cm)";
+        } else {
+            document.getElementById('bolt-alert').innerHTML = "✅ Water level normal (" + bolt_water_level + " cm)";
+        }
+    </script>
+</body>
+</html>
